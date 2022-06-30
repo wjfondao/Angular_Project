@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <h2>92. ngFor and ngIf Recap</h2>
+        <!-- <div class="col-xs-12">
+            <button 
+            class="btn btn-primary"
+            (click)="onlyOdd = !onlyOdd"
+            >Only show button number</button>
+        </div>
+        <br><br>
+        <ul class="list-group">
+        <div *ngIf="onlyOdd" >
+            <li *ngFor="let odd of oddNumber" class="list-group-item">
+                {{ odd }}
+            </li>
+        </div>
+        <div *ngIf="!onlyOdd"> 
+            <li *ngFor="let even of evenNumber" class="list-group-item">
+                {{  even }}
+            </li>
+        </div>
+        </ul> -->
+
+        <div class="col-xs-12">
+            <button 
+            class="btn btn-primary"
+            (click)="clickNumber = clickNumber+1"
+            >Only show button number</button>
+        </div>
+        <br><br>
+        <ul class="list-group">
+
+        <div *ngIf="clickNumber % 2 !== 0">
+            <li *ngFor="let odd of oddNumber" class="list-group-item"
+            appBackgroundNumber
+            [highlightColor]="'green'" 
+            >
+                <span *ngIf="odd <= clickNumber"
+                > {{ odd }}</span>    
+            </li>
+        </div>
+        <div *ngIf="clickNumber % 2 === 0"
+        > 
+            <li *ngFor="let even of evenNumber" class="list-group-item"
+            appBackgroundNumber
+            [highlightColor]="'pink'" >
+                <span *ngIf="even <= clickNumber"> {{  even }}</span>
+               
+            </li>
+        </div>
+        </ul>
+    </div>
+</div>

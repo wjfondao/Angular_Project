@@ -1,0 +1,12 @@
+.panel-body{
+    padding: 2rem ;
+}
+ 
+h5 {
+    text-decoration-line: underline;
+    text-decoration-style: double;
+}
+
+.form-control{
+    width: 100px;
+}

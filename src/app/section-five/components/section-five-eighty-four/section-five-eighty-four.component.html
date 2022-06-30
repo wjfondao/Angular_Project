@@ -1,0 +1,14 @@
+<h2>84. [OPTIONAL] Assignment Solution</h2>
+<div class="row">
+    <div class="col-md-12">
+        <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
+        <app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even>
+    </div>
+</div>
+

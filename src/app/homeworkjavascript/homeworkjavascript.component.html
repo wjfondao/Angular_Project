@@ -1,0 +1,197 @@
+<h1 class="text-center">Homework JavaScript 101 : 10 Function</h1>
+<br />
+<div class="container">
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>(1) .push()</h4></div>
+      <div class="panel-body">
+        <span>
+          <strong>push()</strong>
+          เป็น function ที่เพิ่มค่าเข้าไปในตัวแปร array โดยต่อท้ายจากค่าเดิม
+          แล้วคืนค่าจำนวนรายการทั้งหมดของตัวแปร array กลับมา ซึ่งมีผลให้ตัวแปร
+          array มีการเปลี่ยนแปลง </span
+        ><br />
+        <h5>Example</h5>
+        <div>
+          <div *ngFor="let num of menbers">
+            <p>{{ num }}</p>
+          </div>
+          <label>Input</label>
+          <input type="number" class="form-control" #menber /><br />
+          <button class="btn btn-primary" (click)="onAddnumber(menber.value)">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="panel panel-primary">
+      <div class="panel-heading"><h4>(2) .pop()</h4></div>
+      <div class="panel-body">
+        <span>
+          <strong>pop()</strong>
+          ลบค่าตัวสุดท้ายออกจากตัวแปร array แล้วคืนค่านั้นกลับมา มีผลให้ตัวแปร
+          array มีการเปลี่ยนแปลง </span
+        ><br />
+        <h5>Example</h5>
+
+        <div *ngFor="let num of menberspop">
+          <p>{{ num }}</p>
+        </div>
+        <button class="btn btn-danger" (click)="onDeletenumber()">
+          Delete
+        </button>
+      </div>
+    </div>
+    <br />
+    <div class="panel panel-success">
+      <div class="panel-heading"><h4>(3) .shift()</h4></div>
+      <div class="panel-body">
+        <span>
+          <strong>shift()</strong>
+          ลบค่าตัวแรกออกจากตัวแปร array แล้วคืนค่านั้นกลับมา มีผลให้ตัวแปร array
+          มีการเปลี่ยนแปลง </span
+        ><br />
+        <h5>Example</h5>
+        <div *ngFor="let num of menbersshift">
+          <p>{{ num }}</p>
+        </div>
+        <button class="btn btn-danger" (click)="onShiftnumber()">Delete</button>
+      </div>
+    </div>
+    <br />
+    <div class="panel panel-info">
+      <div class="panel-heading"><h4>(4) .unshift()</h4></div>
+      <div class="panel-body">
+        <span>
+          <strong>unshift()</strong>
+          เพิ่มค่าเข้าไปในตัวแปร array โดยเพิ่มเข้าไปเป็นตัวแรก คืนค่าเป็นจำนวน
+          array ทั้งหมด มีผลให้ตัวแปร array มีการเปลี่ยนแปลง </span
+        ><br />
+        <h5>Example</h5>
+        <div>
+          <div *ngFor="let num of menbersunshift">
+            <p>{{ num }}</p>
+          </div>
+          <label>Input </label>
+          <input type="number" class="form-control" #unshift /><br />
+          <button
+            class="btn btn-primary"
+            (click)="onUnshiftnumber(unshift.value)"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="panel panel-warning">
+      <div class="panel-heading"><h4>(5) .concat()</h4></div>
+      <div class="panel-body">
+        <span>
+          <strong>concat()</strong>
+          ใช้สำหรับสร้างตัวแปร array ใหม่จาก การรวมตัวแปร array ตั้งแต่ 2
+          ตัวขึ้นไป โดยที่ตัวแปร array ที่นำมา รวมกันนั้น ยังเหมือนเดิม
+          ไม่มีการเปลี่ยนแปลงใดๆ </span
+        ><br />
+        <h5>Example</h5>
+        <div>
+          <div>
+            <p>  menbers = [1 , 2 , 3]</p>
+            <p>  menberspop = [4 , 5 , 6]</p>
+            <p>  result = <strong>this.menbers</strong>.concat(<strong>this.menberspop</strong>); </p>
+            <br />
+            <h5>result: </h5><p>{{ result }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="panel panel-danger">
+      <div class="panel-heading"><h4>(6) .join()</h4></div>
+      <div class="panel-body">
+        <span>
+          <strong>join()</strong>
+          การนำค่าแต่ละค่าในตัวแปร array มารวมกันเป็นข้อความ
+          และส่งค่ากลับเป็นข้อความ ที่มีตัวคั่นค่าตัวแปรแต่ละค่า ตามที่กำหนด
+          ถ้าไม่ได้กำหนด จะเป็นเครื่องหมาย comma (,) ให้โดยอัตโนมัติ </span
+        ><br />
+        <h5>Example</h5>
+        <p> cars=["Toyota","Honda","Isuzu"]; </p>
+        <br/>
+        <p> <strong>[1]</strong> carsUseJoin:string = this.cars.join()</p>
+        <p>กรณีไม่กำหนดตัวคั่นค่าตัวแปร => {{ carsUseJoin }}</p>
+        <br/>
+        <p><strong>[2]</strong>  carsFixJoin:string = this.cars.join(' : ')</p>
+        <p>กรณีกำหนดตัวคั่นค่าตัวแปร => {{ carsFixJoin }}</p>
+      </div>
+    </div>
+    <br />
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>(7) .reverse()</h4></div>
+      <div class="panel-body">
+        <span>
+          <strong>reverse() </strong>
+          ใช้สำหรับ กลับลำดับค่าของตัวแปร array เช่น ค่าจากเดิม คือ 1 2 3
+          เมื่อใช้ reverse() ลำดับค่าใหม่จะเท่ากับ 3 2 1 มีผลให้ตัวแปร array
+          มีการเปลี่ยนแปลง </span
+        ><br />
+        <h5>Example</h5>
+        <div>
+          <div *ngFor="let num of menbers">
+            <p>{{ num }}</p>
+          </div>
+          <button class="btn btn-primary" (click)="onRever()">reverse</button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="panel panel-primary">
+      <div class="panel-heading"><h4>(8) .length</h4></div>
+      <div class="panel-body">
+        <span>
+          <strong>length</strong>
+          คำสั่ง หรือฟังก์ชันสำหรับนับจำนวน เช่น นับจำนวน Array
+          หรือนับจำนวนตัวอักษรจากข้อความ โดยคำสั่ง length
+          จะคืนค่าเป็นตัวเลขจำนวนเต็มบวกที่สามารถนับได้ </span
+        ><br />
+        <h5>Example</h5>
+        {{ 'Length in ' + '[ ' + text1 + ' ]' + ' is ' +  sumLengthcars}}
+      
+      </div>
+    </div>
+    <br />
+    <div class="panel panel-success">
+      <div class="panel-heading"><h4>(9) .find()</h4></div>
+      <div class="panel-body">
+        <span>
+          <strong>find() </strong>
+          ใช้สำหรับหาค่าใน array ซึ่งถ้าค่าตรงกับฟังก์ชันก็จะคืนค่านั้นออกมา หากไม่มีค่าใดที่ตรงตามฟังก์ชันก็จะคืนค่าเป็น <strong>undefined</strong> </span><br />
+        <h5>Example</h5>
+        <p> cars=["Toyota","Honda","Isuzu"]; </p>
+        <br/>
+        <p> findcar = this.cars.find(element => element === "Honda");</p>
+        <br/>
+        <h5>result: </h5><p>{{ findcar }}</p>
+      </div>
+    </div>
+    <br />
+    <div class="panel panel-info">
+      <div class="panel-heading"><h4>(10) .filter()</h4></div>
+      <div class="panel-body">
+        <span>
+          <strong> filter() </strong>
+          ใช้สำหรับสร้าง Array ใหม่ เมื่อผ่านเงื่อนไขที่กำหนด จาก Array ที่ใช้เรียก.
+          </span><br />
+          <p>includes() กำหนดว่า Array มีค่าบางอย่างในรายการนะ</p>
+        <h5>Example</h5>
+        
+        <p> menu = ['Espresso', 'Iced Coffee', 'Cappuccino', 'Latte', 'Iced Tea', 'Iced Pink Milk']; </p>
+        <br/>
+        <p> resultmenu = this.menu.filter(element => element.includes('Iced'))</p>
+        <br/>
+        <h5>result: </h5><p>{{ resultmenu }}</p>
+      </div>
+    </div>
+  </div>
+</div>

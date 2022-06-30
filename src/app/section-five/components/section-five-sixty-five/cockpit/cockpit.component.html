@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h2>65: Splitting Apps into Components</h2>
+    <p>Add new servers or blueprints!!!</p>
+    <label>Server Name</label>
+    <!-- 69. Binding to Custom Events -->
+    <!--  74. <input type="text" class="form-control" [(ngModel)]="newServerName" /> -->
+    <input 
+      type="text" 
+      class="form-control" 
+      #newServerName />
+    <br />
+    <label>Server Content</label>
+    <!-- 69. Binding to Custom Events -->
+    <!-- <input type="text" class="form-control" [(ngModel)]="newServerContent" /> -->
+
+    <input 
+      type="text" 
+      class="form-control" 
+      #newServerInput/>
+    <br />
+    <button class="btn btn-success" (click)="onAddServer(newServerName)">Add Server</button
+    >&nbsp;
+    <!-- <button class="btn btn-primary" (click)="onAddBlueprint(newServerName)">
+      Add Server Blueprints
+    </button> -->
+    <button class="btn btn-primary" (click)="onAddBlueprintTest()">
+      Add Server Blueprints
+    </button>
+  </div>
+</div>

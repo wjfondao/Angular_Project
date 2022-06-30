@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <h2>99. Binding to Directive Properties</h2>
+    <br />
+    <!-- example 1: -->
+    <!-- <h3>example 1:</h3>
+        <p 
+          class="text-center"
+          appBindingHighlight  
+          [highlightColor]="'red'" 
+          [defaultColor]="'yellow'"
+        >
+          [highlightColor]="'red'" -- [defaultColor]="'yellow'"
+        </p> -->
+    <br />
+    <!-- example 2: -->
+    <!-- <h3>example 2:</h3>
+    <p
+      class="text-center"
+      appBindingHighlight
+      [appBindingHighlight]="'red'"
+      [defaultColor]="'yellow'"
+    >
+      [ngClass] => [appBindingHighlight]="'red'" -- [defaultColor]="'yellow'"
+    </p> -->
+
+    <br />
+    <!-- example 3: -->
+    <h3>example 3:</h3>
+    <p
+      class="text-center"
+      appBindingHighlight
+      [appBindingHighlight]="'red'"
+      defaultColor="yellow"
+    >
+      [ngClass] => [appBindingHighlight]="'red'" -- defaultColor="yellow"
+    </p>
+  </div>
+</div>

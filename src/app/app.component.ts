@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'learn-angular-app';
+  toggleSidebar: boolean = false;
+
+  openToggle(){
+    return this.toggleSidebar;
+  } 
+
+  onClickToggleSidebar() {
+    this.toggleSidebar = !this.toggleSidebar;
+  }
 }
